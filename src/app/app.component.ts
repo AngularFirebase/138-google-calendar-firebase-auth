@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import * as firebase from 'firebase/app';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,5 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private afs: AngularFirestore) {
-    //   afs.collection('animals').snapshotChanges(
-    // ).subscribe(x => {
-    //   console.log(x)
-    // })
-    const fire = firebase.firestore().doc('animals/elephant');
-  }
+  constructor(private auth: AuthService) {}
 }

@@ -4,10 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
 
 // Add your project credentials
 // Then use it in the imports section below
@@ -31,9 +28,7 @@ import { firebase } from '../env';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebase),
-    AngularFirestoreModule, 
     AngularFireAuthModule, 
-    AngularFireStorageModule
    ],
   bootstrap: [AppComponent]
 })
